@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Entre les Mondes</title>
+    <style>
+        /* CSS for the table layout */
+        table {
+            //width: 20%;
+			min-width: 300px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+			vertical-align: top;
+            padding: 8px;
+            border: 1px solid #ddd;
+			overflow: hidden;
+			white-space: nowrap;
+        }
+		
+		img {
+			min-height: 200px;
+			max-width: 95%;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 1px;
+			margin-top: 1px;
+			box-sizing = border-box;
+		}
+		
+		.form-container {
+            display: flex;
+			justify-content: center;
+			margin-bottom: 20px;
+        }
+
+        .form {
+            flex: 1;
+            padding: 10px;
+            border: None;
+            margin-right: 10px; /* Add some spacing between forms */
+        }
+		
+		.centered-content {
+            text-align: center; /* Center content horizontally */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content vertically */
+			justify-content: flex-start; /* Align items to the top */
+            //height: 100vh; /* Make the container full height of the viewport */
+			//min-width: 300px;
+            justify-content: space-between; /* Create space between content and button */
+        }
+		
+		.image-container {
+			max-height:10%;
+			max-width:95%;
+			display: flex;
+			flex-wrap: wrap;
+			margin-left: auto;
+			margin-right: auto;
+		}
+    </style>
+</head>
+<body>
+	<div class="centered-content">
+		<table style="width:80%">
+			<tr>
+				<td>
+					<form class="form">	
+						<h2>Clé</h2>
+						<table style="text-align: center;margin-left:auto;margin-right:auto;">
+							<tbody><tr>
+								<td>
+									<label for="corps_c">Corps:</label>
+								</td>
+								<td>
+									<select id="corps_c" name="corps_c">
+										<option value="3" selected>Majeure</option>
+										<option value="2">Médiane</option>
+										<option value="1">Mineure</option>
+										<option value="0">Restante</option>
+									</select>
+								</td>
+								<td>
+									<label for="elem_maj_c">Élément majeur:</label>
+								</td>
+								<td>
+									<select id="elem_maj_c" name="elem_maj_c">
+										<option value="0">Feu</option>
+										<option value="1">Eau</option>
+										<option value="2">Air</option>
+										<option value="3">Terre</option>
+									</select>
+								</td>
+							</tr>
+							
+							<tr>
+								<td>
+									<label for="instinct_c">Instinct:</label>
+								</td>
+								<td>
+									<select id="instinct_c" name="instinct_c">
+										<option value="3">Majeure</option>
+										<option value="2" selected>Médiane</option>
+										<option value="1">Mineure</option>
+										<option value="0">Restante</option>
+									</select>
+								</td>
+								<td>
+									<label for="elem_min_c">Élément mineur:</label>
+								</td>
+								<td>
+									<select id="elem_min_c" name="elem_maj_c">
+										<option value="0">Feu</option>
+										<option value="1">Eau</option>
+										<option value="2">Air</option>
+										<option value="3">Terre</option>
+									</select>
+								</td>
+							</tr>
+
+							<tr>
+								<td>
+									<label for="esprit_c">Esprit:</label>
+								</td>
+								<td>
+									<select id="esprit_c" name="esprit_c">
+										<option value="3">Majeure</option>
+										<option value="2">Médiane</option>
+										<option value="1" selected>Mineure</option>
+										<option value="0">Restante</option>
+									</select>
+								</td>
+							</tr>
+						
+							<tr>
+								<td>
+									<label for="raison_c">Raison:</label>
+								</td>
+								<td>
+									<select id="raison_c" name="raison_c">
+										<option value="3">Majeure</option>
+										<option value="2">Médiane</option>
+										<option value="1">Mineure</option>
+										<option value="0" selected>Restante</option>
+									</select>					</td>
+							</tr>
+						</tbody>
+						</table>
+					</form>
+				</td>
+				<td>
+					<form class="form">	
+						<h2>Double</h2>
+						<table style="text-align: center;margin-left:auto;margin-right:auto;">
+							<tr>
+								<td>
+									<label for="corps_d">Corps:</label>
+								</td>
+								<td>
+									<select id="corps_d" name="corps_d">
+										<option value="3" selected>Majeure</option>
+										<option value="2">Médiane</option>
+										<option value="1">Mineure</option>
+										<option value="0">Restante</option>
+									</select>
+								</td>
+								<td>
+									<label for="elem_maj_d">Élément majeur:</label>
+								</td>
+								<td>
+									<select id="elem_maj_d" name="elem_maj_d">
+										<option value="0">Feu</option>
+										<option value="1">Eau</option>
+										<option value="2">Air</option>
+										<option value="3">Terre</option>
+									</select>
+								</td>
+							</tr>
+							
+							<tr>
+								<td>
+									<label for="instinct_d">Instinct:</label>
+								</td>
+								<td>
+									<select id="instinct_d" name="instinct_d">
+										<option value="3">Majeure</option>
+										<option value="2" selected>Médiane</option>
+										<option value="1">Mineure</option>
+										<option value="0">Restante</option>
+									</select>
+								</td>
+								<td>
+									<label for="elem_min_d">Élément mineur:</label>
+								</td>
+								<td>
+									<select id="elem_min_d" name="elem_min_d">
+										<option value="0">Feu</option>
+										<option value="1">Eau</option>
+										<option value="2">Air</option>
+										<option value="3">Terre</option>
+									</select>
+								</td>
+							</tr>
+
+							<tr>
+								<td>
+									<label for="esprit_d">Esprit:</label>
+								</td>
+								<td>
+									<select id="esprit_d" name="esprit_d">
+										<option value="3">Majeure</option>
+										<option value="2">Médiane</option>
+										<option value="1" selected>Mineure</option>
+										<option value="0">Restante</option>
+									</select>
+								</td>
+							</tr>
+						
+							<tr>
+								<td>
+									<label for="raison_d">Raison:</label>
+								</td>
+								<td>
+									<select id="raison_d" name="raison_d">
+										<option value="3">Majeure</option>
+										<option value="2">Médiane</option>
+										<option value="1">Mineure</option>
+										<option value="0" selected>Restante</option>
+									</select>
+								</td>
+							</tr>
+						</table>
+					</form>
+				</td>
+			</tr>
+			<tr>
+			
+				<td colspan="2">
+					<button id="fill_character" class="center-button">Enregistrer/reset le personnage</button>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" style="display: none" id="registered_ctrl">
+					<button id="show_deck" class="center-button" onclick="toggleVisibility('deck')">Montrer/Cacher le deck initial</button>
+					<button id="show_deck_remain" class="center-button" onclick="toggleVisibility('deck_remain')">Montrer/Cacher le deck restant</button>
+					<button id="show_deck_used" class="center-button" onclick="toggleVisibility('deck_used')">Montrer/Cacher le deck utilisé</button>
+				</td>
+			</tr>
+			<tr style="display: none;" id="deck">
+				<td>
+					<h2>Deck initial de la clé</h2>
+					<table id="deck_c" class="centered-content">
+					</table>
+				</td>
+				<td>
+					<h2>Deck initial du double</h2>
+					<table id="deck_d" class="centered-content">
+					</table>
+				</td>
+			</tr>
+			<tr style="display: none;" id="draw_board">
+				<td style="width:50%">
+					<h2>Controles de la clé</h2>
+					<table style="margin-left:auto; margin-right:auto; width:95%">
+						<tr>
+							<form class="form">
+									<td><label for="draw_c">Tirer des cartes:</label></td>
+									<td><input type="number" id="draw_c" min="0" max="72" value="1"></td>
+									<td><input type="checkbox" id="show_cards_c">Voir les cartes</input></td>
+									<td><button id="draw_c_btn">Tirer</button></td>
+							</form>
+						</tr>
+						<tr>
+							<form class="form">
+								<td><label for="peek_c">Voir des cartes sans pioche:</label></td>
+								<td><input type="number" id="peek_c" min="0" max="72" value="1"></td>
+								<td><input type="checkbox" id="peek_incurr_c">Dans le deck actif</input></td>
+								<td><button id="peek_c_btn">Observer</button></td>
+							</form>
+						</tr>
+						<tr>
+							<form class="form">
+								<td><label for="regen_c">Régénérer des cartes:</label></td>
+									<td><input type="number" id="regen_c" min="0" max="72" value="1"></td>
+								<td></td>
+								<td><button id="regen_c_btn">Régénérer</button></td>
+							</form>
+						</tr>
+						<tr>
+							<td colspan="4">
+								<div id="hand_c" class="image-container"></div>
+							</td>
+						</tr>
+						<tr>
+							<td><button id="reset_hand_c" class="center-button">Vider la main/tirage</button></td>
+							<td><button id="refresh_hand_c" class="center-button">Recharger la main/tirage</button></td>
+						</tr>
+					</table>
+				</td>
+				<td style="width:50%">
+					<h2>Controles du double</h2>
+					<table style="margin-left:auto; margin-right:auto; width:95%">
+						<tr>
+							<form class="form">
+									<td><label for="draw_d">Tirer des cartes:</label></td>
+									<td><input type="number" id="draw_d" min="0" max="72" value="1"></td>
+									<td><input type="checkbox" id="show_cards_d">Voir les cartes</input></td>
+									<td><button id="draw_d_btn">Tirer</button></td>
+							</form>
+						</tr>
+						<tr>
+							<form class="form">
+								<td><label for="peek_d">Voir des cartes sans pioche:</label></td>
+								<td><input type="number" id="peek_d" min="0" max="72" value="1"></td>
+								<td><input type="checkbox" id="peek_incurr_d">Dans le deck actif</input></td>
+								<td><button id="peek_d_btn">Observer</button></td>
+							</form>
+						</tr>
+						<tr>
+							<form class="form">
+								<td><label for="regen_d">Régénérer des cartes:</label></td>
+									<td><input type="number" id="regen_d" min="0" max="72" value="1"></td>
+								<td></td>
+								<td><button id="regen_d_btn">Régénérer</button></td>
+							</form>
+						</tr>
+						<tr>
+							<td colspan="4">
+								<div id="hand_d" class="image-container"></div>
+							</td>
+						</tr>
+						<tr>
+							<td><button id="reset_hand_d" class="center-button">Vider la main/tirage</button></td>
+							<td><button id="refresh_hand_d" class="center-button">Recharger la main/tirage</button></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr style="display: none;" id="deck_remain">
+				<td>
+					<h2> Deck restant de la clé</h2>
+					<p id="deck_count_c"></p>
+					<button id="show_deck_remain_c" class="center-button">Montrer/Cacher le deck restant de la clé</button>
+					<table id="deck_remain_c" class="centered-content" style="display: none;">
+					</table>
+				</td>
+				<td>
+					<h2> Deck restant du double</h2>
+					<p id="deck_count_d"></p>
+					<button id="show_deck_remain_d" class="center-button">Montrer/Cacher le deck restant du double</button>
+					<table id="deck_remain_d" class="centered-content" style="display: none;">
+					</table>
+				</td>
+		</table>
+	</div>
+
+    <script>
+		const CARAC_MAP = {0: "Corps", 1: "Instinct", 2: "Esprit", 3: "Raison", 4: "REUSSITE", 5: "ECHEC"};
+		const ELEM_MAP = {0: "Feu", 1: "Eau", 2: "Air", 3: "Terre"};
+		let MEDIA_LOCATION = "./media/";
+		let BACK_NAME = "verso";
+		let REGISTERED = false;
+		let player;
+	
+		class Card {
+			#carac_id;
+			#elem_id;
+			#carac;
+			#elem;
+			constructor(carac, elem) {
+				this.#carac_id = carac;
+				this.#elem_id = elem;
+				this.#carac = CARAC_MAP[carac];
+				this.#elem = ELEM_MAP[elem];
+				
+			}
+			
+			get name() {
+				return this.#elem + "_" + this.#carac;
+			}
+			
+			get carac() {
+				return this.#carac_id;
+			}
+			
+			get element() {
+				return this.#elem_id;
+			}
+		}
+	
+		function deck_building(caracs, elems) {
+		//     F | E | A | T
+		// C |   |   |   |
+		// I |   |   |   |
+		// R |   |   |   |
+		// E |   |   |   |
+		// R+|   |   |   |
+		// E-|   |   |   |
+		
+			const deck_tmpl = []
+			
+			for (let carac_pass = 0; carac_pass < caracs.length; carac_pass++) {
+				deck_tmpl.push([]);
+				for (let elem_pass = 0; elem_pass < elems.length; elem_pass++) {
+					deck_tmpl[carac_pass].push(1 + parseInt(caracs[carac_pass]) + parseInt(elems[elem_pass]));
+				}
+			}
+			// Crits
+			deck_tmpl.push([1,1,1,1]);
+			deck_tmpl.push([1,1,1,1]);
+			return deck_tmpl;
+		}
+		
+		function deck_array(deck) {
+			const deck_arr = [];
+			for (let carac_pass = 0; carac_pass < deck.length; carac_pass++) {
+				for (let elem_pass = 0; elem_pass < deck[carac_pass].length; elem_pass++) {
+					for (let i = 0; i < deck[carac_pass][elem_pass]; i++) {
+						deck_arr.push(new Card(carac_pass, elem_pass));
+					}
+				}
+			}
+			return deck_arr;
+		}
+		
+		function getRandomInt(max) {
+			return Math.floor(Math.random() * max);
+		}
+		
+		function deepcopy(obj) {
+		  if (typeof obj !== 'object' || obj === null) {
+			// If obj is not an object, return it as is (e.g., numbers, strings, etc.)
+			return obj;
+		  }
+
+		  if (Array.isArray(obj)) {
+			// If obj is an array, create a new array and deep copy its elements
+			const copy = [];
+			for (let i = 0; i < obj.length; i++) {
+			  copy[i] = deepcopy(obj[i]);
+			}
+			return copy;
+		  }
+
+		  // If obj is an object, create a new object and deep copy its properties
+		  const copy = {};
+		  for (const key in obj) {
+			if (obj.hasOwnProperty(key)) {
+			  copy[key] = deepcopy(obj[key]);
+			}
+		  }
+		  return copy;
+		}
+
+		// Cleanup: Keep only one method ... And on player use 2 decks
+		class Deck {
+			constructor(deck) {
+				this._deck_init = deck;
+				this._deck_curr = deepcopy(this._deck_init);
+				
+				this.deck_init_list = deck_array(this._deck_init);
+				this.deck_curr_list = deck_array(this._deck_init);
+				this.deck_discard_list = [];
+				
+				this.hand = [];
+			}
+			
+			get deck_init() {
+				return this.deck_init;
+			}
+			
+			_draw(cnt, deck, hand) {
+				if (isNaN(cnt)) {
+					alert("Nombre de cartes inconnu");
+					return;
+				}
+				for (let i = 0; i < cnt; i++) {
+					if (deck.length) {
+						let card = deck.splice(getRandomInt(deck.length), 1)[0];
+						hand.push(card);
+					} else {
+						alert("PLUS DE CARTES.");
+					}
+				}
+			}
+			
+			draw(cnt) {
+				let start_hand = this.hand.length;
+				this._draw(cnt, this.deck_curr_list, this.hand);
+				for (const card of this.hand.slice(start_hand)) {
+					let x = card.carac;
+					let y = card.element;
+					this._deck_curr[x][y] -= 1;
+				}
+			}
+			
+			peek(cnt, in_curr) {
+				let peek_hand = [];
+				for (let i = 0; i < cnt; i++) {
+					if (in_curr) {
+						peek_hand.push(this.deck_curr_list[getRandomInt(this.deck_curr_list.length)]);
+					} else {
+						peek_hand.push(this.deck_init_list[getRandomInt(this.deck_init_list.length)]);
+					}
+				}
+				return peek_hand;
+			}
+			
+			regen(cnt) {
+				this.clear_hand();
+				for (let i = 0; i < cnt; i++) {
+					if (this.deck_discard_list.length == 0) {
+						alert("Plus rien à regen");
+						return;
+					}
+					let card = this.deck_discard_list.splice(getRandomInt(this.deck_discard_list.length), 1)[0];
+					this._deck_curr[card.carac][card.element] += 1;
+					this.deck_curr_list.push(card);
+				}
+			}
+			regen_all() {
+				this.deck_curr_list = deck_array(this._deck_init);
+				this.deck_discard_list = [];
+			}
+			
+			clear_hand() {
+				while (this.hand.length > 0) {
+					this.deck_discard_list.push(this.hand.pop());
+				}
+			}
+			
+			display_deck(elem, deck) {
+				var table = document.getElementById(elem);
+
+				// Clear the existing table content
+				while (table.firstChild) {
+					table.removeChild(table.firstChild);
+				}				
+				
+				for (let i = 0; i <= Object.keys(CARAC_MAP).length; i++) {
+					var row = table.insertRow(i);
+					
+					for (let j = 0; j <= Object.keys(ELEM_MAP).length; j++) {
+						var cell = row.insertCell(j);
+						
+						if (i == 0) {
+							if (j > 0) {
+								cell.innerHTML = ELEM_MAP[j-1];
+							}
+						} else if (j == 0) {
+							cell.innerHTML = CARAC_MAP[i-1];
+						} else {
+							cell.innerHTML = deck[i-1][j-1];
+						}
+					}
+				}
+			}
+			
+			display_deck_init(elem) {
+				this.display_deck(elem,this._deck_init);
+
+			}
+			
+			display_remaining_cards(elem) {
+				this.display_deck(elem, this._deck_curr);
+			}
+			
+			count_remaining_cards(elem) {
+				let text = document.getElementById(elem);
+				
+				text.innerHTML = "Cartes restantes: "+this.deck_curr_list.length+"/"+this.deck_init_list.length;
+			}
+		}
+		
+		// Player class
+		class Player {
+			constructor(caracs_pts_c, elem_maj_c, elem_min_c, caracs_pts_d, elem_maj_d, elem_min_d) {
+				var elems_c = new Array(4).fill(0);
+				elems_c[elem_maj_c] += 3
+				elems_c[elem_maj_d] += 2
+				elems_c[elem_min_c] += 1
+				
+				var elems_d = new Array(4).fill(0);
+				elems_d[elem_maj_d] += 3
+				elems_d[elem_maj_c] += 2
+				elems_d[elem_min_d] += 1
+				
+				// Deck building
+				this.deck_c = new Deck(deck_building(caracs_pts_c ,elems_c));
+				this.deck_d = new Deck(deck_building(caracs_pts_d, elems_d));
+			}
+		}
+	
+        // JavaScript to handle button click
+        function register_character() {
+			player = new Player([
+									document.getElementById("corps_c").value, 
+									document.getElementById("instinct_c").value,
+									document.getElementById("esprit_c").value,
+									document.getElementById("raison_c").value
+								],
+								document.getElementById("elem_maj_c").value,
+								document.getElementById("elem_min_c").value,
+								[
+									document.getElementById("corps_d").value,
+									document.getElementById("instinct_d").value,
+									document.getElementById("esprit_d").value,
+									document.getElementById("raison_d").value
+								],
+								document.getElementById("elem_maj_d").value,
+								document.getElementById("elem_min_d").value);
+										
+			player.deck_c.display_deck_init("deck_c");
+			player.deck_d.display_deck_init("deck_d");
+
+			display_deck();
+			
+			document.getElementById("draw_board").style.display = "";
+			document.getElementById("registered_ctrl").style.display = "";
+			REGISTERED = true;
+        };
+		
+		function display_hand(elem, hand, show_cards) {
+			let container = document.getElementById(elem);
+			container.innerHTML = "";
+			hand.forEach((card) => {
+				const img = document.createElement("img");
+				if (show_cards) {
+					img.src = MEDIA_LOCATION + card.name + ".png";
+					img.alt = card.name;
+				} else {
+					img.src = MEDIA_LOCATION + BACK_NAME + ".png";
+					img.alt = "Caché";
+				}
+				img.style.maxHeight = Math.max(window.innerHeight * 0.1, 250) + "px";
+				img.class = 'img';
+				container.appendChild(img);
+			});
+		}
+		
+		function draw_cards(is_c, show) {
+			if (player) {
+				if (is_c) {
+					cnt = document.getElementById("draw_c").value;
+					show_cards = document.getElementById("show_cards_c").checked;
+					player.deck_c.draw(cnt);
+					display_hand("hand_c", player.deck_c.hand, show_cards);
+				} else {
+					cnt = document.getElementById("draw_d").value;
+					show_cards = document.getElementById("show_cards_d").checked;
+					player.deck_d.draw(cnt);
+					display_hand("hand_d", player.deck_d.hand, show_cards);
+				}
+				display_deck();
+			}
+		}
+		
+		function peek_cards(is_c) {
+			if (player) {
+				if (is_c) {
+					cnt = document.getElementById("peek_c").value;
+					peek_hand = player.deck_c.peek(cnt, document.getElementById("peek_incurr_c").checked);
+					display_hand("hand_c", peek_hand, true);
+				} else {
+					cnt = document.getElementById("peek_d").value;
+					peek_hand = player.deck_d.peek(cnt, document.getElementById("peek_incurr_d").checked);
+					display_hand("hand_d", peek_hand, true);
+				}
+			}
+		}
+		
+		function clear_hand(is_c) {
+			if (is_c) {
+				document.getElementById("hand_c").innerHTML = '';
+				if (player) {
+					player.deck_c.clear_hand();
+				}
+			} else {
+				document.getElementById("hand_d").innerHTML = '';
+				if (player) {
+					player.deck_d.clear_hand();
+				}
+			}
+			display_deck();
+		}
+		
+		function regen_cards(is_c) {
+			if (player) {
+				if (is_c) {
+					cnt = document.getElementById("regen_c").value;
+					player.deck_c.regen(cnt);
+					clear_hand(true);
+				} else {
+					cnt = document.getElementById("regen_d").value;
+					player.deck_d.regen(cnt);
+					clear_hand(false);
+				}
+			}
+		}
+		
+		function count_remaining_cards() {
+			if (player) {
+				player.deck_c.count_remaining_cards("deck_count_c");
+				player.deck_d.count_remaining_cards("deck_count_d");
+			}
+		}
+		
+		function display_deck() {
+			if (player) {
+				player.deck_c.display_remaining_cards("deck_remain_c");
+				player.deck_d.display_remaining_cards("deck_remain_d");
+				count_remaining_cards();
+			} else {
+				alert("Player not found");
+			}
+		}
+		
+		function toggleVisibility(elem) {
+            var row = document.getElementById(elem);
+            if (row) {
+                if (row.style.display === 'none') {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            }
+        }
+
+		document.getElementById("fill_character").addEventListener("click", function() {register_character()});
+		
+		document.getElementById("draw_c_btn").addEventListener("click", function(event) {event.preventDefault();draw_cards(true)});
+		document.getElementById("draw_d_btn").addEventListener("click", function(event) {event.preventDefault();draw_cards(false)});
+		
+		document.getElementById("refresh_hand_c").addEventListener("click", function(event) {event.preventDefault(); display_hand("hand_c", player.deck_c.hand, document.getElementById("show_cards_c").checked)});
+		document.getElementById("refresh_hand_d").addEventListener("click", function(event) {event.preventDefault(); display_hand("hand_d", player.deck_c.hand, document.getElementById("show_cards_d").checked)});
+		
+		document.getElementById("peek_c_btn").addEventListener("click", function(event) {event.preventDefault();peek_cards(true)});
+		document.getElementById("peek_d_btn").addEventListener("click", function(event) {event.preventDefault();peek_cards(false)});
+
+		document.getElementById("reset_hand_c").addEventListener("click", function() {clear_hand(true)});
+		document.getElementById("reset_hand_d").addEventListener("click", function() {clear_hand(false)});
+		
+		document.getElementById("regen_c_btn").addEventListener("click", function(event) {event.preventDefault();regen_cards(true)});
+		document.getElementById("regen_d_btn").addEventListener("click", function(event) {event.preventDefault();regen_cards(false)});
+		
+		document.getElementById("show_deck_remain_c").addEventListener("click", function() {display_deck()});
+		document.getElementById("show_deck_remain_c").addEventListener("click", function() {toggleVisibility("deck_remain_c")});
+		
+		document.getElementById("show_deck_remain_d").addEventListener("click", function() {display_deck()});
+		document.getElementById("show_deck_remain_d").addEventListener("click", function() {toggleVisibility("deck_remain_d")});
+
+
+    </script>
+</body>
+</html>
